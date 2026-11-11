@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Reserva - El Tío Gonzales</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main>
+        <h1>Formulario de Reserva de Cancha</h1>
+        <form id="form-reserva" action="#" method="POST" novalidate>
+            
+            <fieldset>
+                <legend>Datos Personales del Capitán</legend>
+                
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input id="nombre" name="nombre" type="text" required minlength="3" autocomplete="name" placeholder="Ej. Willian Gonzales">
+                </div>
+
+                <div class="form-group">
+                    <label for="dni">Documento de Identidad (DNI):</label>
+                    <input id="dni" name="dni" type="text" required pattern="[0-9]{8}" maxlength="8" placeholder="8 dígitos" aria-describedby="ayuda-dni">
+                    <p id="ayuda-dni" class="ayuda-texto">Ingrese los 8 números de su documento de identidad sin letras.</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="celular">Teléfono Celular (Yape/Plin):</label>
+                    <input id="celular" name="celular" type="tel" required pattern="9[0-9]{8}" maxlength="9" autocomplete="tel" placeholder="Ej. 951234567" aria-describedby="ayuda-celular">
+                    <p id="ayuda-celular" class="ayuda-texto">9 dígitos, debe iniciar con el número 9.</p>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Detalles del Alquiler</legend>
+                
+                <div class="form-group">
+                    <label for="fecha">Fecha del Partido:</label>
+                    <input id="fecha" name="fecha" type="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="comprobante">Adjuntar Captura de Pago (JPG/PNG):</label>
+                    <input id="comprobante" name="comprobante" type="file" accept="image/png, image/jpeg" required>
+                </div>
+            </fieldset>
+
+            <button type="submit" tabindex="0">Enviar Solicitud de Reserva</button>
+        </form>
+    </main>
+</body>
+</html>
